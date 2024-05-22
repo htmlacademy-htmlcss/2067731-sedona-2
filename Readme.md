@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Юлия Левицкая](https://up.htmlacademy.ru/htmlcss-individual/2/user/2067731).
-* Наставник: `Неизвестно`.
+* Наставник: [Павел Позняк](https://htmlacademy.ru/profile/id907403).
 
 ---
 
