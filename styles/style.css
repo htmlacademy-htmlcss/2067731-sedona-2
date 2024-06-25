@@ -1,0 +1,283 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/ptsans-700.woff2);
+  font-display: swap;
+}
+
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+  background-color: #F2F2F2;
+  margin: 0;
+}
+
+.page-container {
+  width: 1200px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  box-shadow: 0 0p 15px 0 #00000033;
+}
+
+
+.navigation-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation-link {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+  text-decoration: none;
+  text-align: center;
+}
+
+.navigation-user {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+.button {
+  font-family: inherit;
+}
+
+
+
+.intro {
+  text-align: center;
+  color: #ffffff;
+  background-color: #83B3D333;
+  background-image: url(../images/background-index.jpg);
+  width: 1200px;
+  height: 485px;
+  background-repeat: no-repeat;
+}
+
+
+.advantages {
+  padding-top: 69px;
+  text-align: center;
+}
+
+
+.advantages .title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  max-width: 620px;
+
+}
+
+.advantages .text {
+  color: #333333;
+  font-size: 22px;
+  line-height: 26px;
+  max-width: 651px;
+
+}
+
+
+.advantages-list {
+  list-style: none;
+  text-align: center;
+}
+
+li.advantages-item {
+  background-color: #82B3D3;
+}
+
+
+li.advantages-item:nth-child(2) {
+  background-color: #83B3D31F;
+}
+
+
+li.advantages-item:nth-child(3) {
+  background: #83B3D333;
+}
+
+
+li.advantages-item:nth-child(4) {
+  background-color: #83B3D31F;
+}
+
+
+.advantages-picture-text .advantages-title {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  max-width: 175px;
+}
+
+
+.advantages-picture-text .advantages-description {
+  color: #ffffff;
+  max-width: 230px;
+}
+
+.advantages-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  max-width: 175px;
+}
+
+
+.advantages-description {
+  color: #333333;
+  max-width: 230px;
+}
+
+
+.infrastructure {
+  padding-top: 64px;
+  text-align: center;
+}
+
+.infrastructure .title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  max-width: 505px;
+}
+
+.infrastructure .text {
+  color: #333333;
+  font-size: 22px;
+  line-height: 26px;
+  max-width: 490px;
+}
+
+
+li.infrastructure-item {
+  background-color: #83B3D31F;
+}
+
+
+li.infrastructure-item:nth-child(2) {
+  background-color: #FFFFFF;
+}
+
+
+.infrastructure-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+.infrastructure-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  max-width: 230px;
+}
+
+.infrastructure-description {
+  color: #333333;
+  max-width: 230;
+}
+
+
+.search {
+  padding-top: 96px;
+  text-align: center;
+}
+
+.search-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  max-width: 297px;
+}
+
+
+.search-description {
+  color: #333333;
+  font-size: 22px;
+  line-height: 26px;
+  max-width: 592px;
+}
+
+
+.news-letter {
+  padding-top: 96px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #83B3D333;
+  background-image: url(../images/background-subscribe.jpg);
+  width: 1200px;
+  height: 414px;
+  background-repeat: no-repeat;
+}
+
+.news-letter-title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  max-width: 404px;
+}
+
+
+news-letter-description {
+  font-size: 22px;
+  line-height: 26px;
+  max-width: 475px;
+}
+
+.page-footer {
+  padding-top: 40px;
+  text-align: center;
+}
+
+
+.social-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+.social-link {
+  color: #83B3D3;
+  text-decoration: none;
+}
+
+
+.phone {
+  color: #000000;
+  font-size: 40px;
+  line-height: 40px;
+  text-decoration: none;
+}
+
+.copyright {
+  color: #000000;
+  text-decoration: none;
+}
