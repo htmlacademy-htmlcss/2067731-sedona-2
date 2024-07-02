@@ -6,7 +6,6 @@
   font-display: swap;
 }
 
-
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
@@ -15,9 +14,13 @@
   font-display: swap;
 }
 
+* {
+  box-sizing: border-box;
+}
 
 body {
   font-family: "PT Sans", sans-serif;
+  font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
@@ -26,6 +29,34 @@ body {
   margin: 0;
 }
 
+.button {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.button-brown {
+  background-color: rgb(117, 97, 87);
+}
+
+.button-blue {
+  background-color: rgb(130, 179, 211);
+}
+
+.button-green {
+  background-color: rgb(125, 181, 79);
+}
+
+.button-transparent {
+  background-color: transparent;
+}
 
 .page-container {
   width: 1200px;
@@ -34,15 +65,9 @@ body {
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
-
-.title {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-  text-transform: uppercase;
+.page-header {
   color: rgb(0, 0, 0);
 }
-
 
 .navigation-list {
   margin: 0;
@@ -50,16 +75,15 @@ body {
   list-style: none;
 }
 
-
 .navigation-link {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
   color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
   text-decoration: none;
   text-align: center;
 }
-
 
 .navigation-user {
   margin: 0;
@@ -67,41 +91,36 @@ body {
   list-style: none;
 }
 
-
-.button {
-  font-family: inherit;
-}
-
-
 .intro {
   text-align: center;
   color: rgb(255, 255, 255);
-  background-color: rgba(131, 179, 211, 0.2);
-  background-image: url("../images/background-index.jpg");
-  height: 485px;
+  background-color: rgb(130, 179, 211);
+  background-image: url("../images/background-index-decor.svg"),
+    url("../images/background-index.jpg");
+  background-size: 100% auto, cover;
+  min-height: 485px;
   background-repeat: no-repeat;
+  background-position: left bottom, left top;
 }
-
 
 .advantages {
   padding-top: 69px;
   text-align: center;
 }
 
-
-.title-advantages {
+.advantages-title {
   font-size: 30px;
   line-height: 36px;
   max-width: 620px;
-
+  margin: 0 auto 25px auto;
 }
 
-.text-advantages {
+.advantages-text {
   font-size: 22px;
   line-height: 26px;
   max-width: 651px;
+  margin: 0 auto 69px auto;
 }
-
 
 .advantages-list {
   margin: 0;
@@ -109,60 +128,78 @@ body {
   list-style: none;
 }
 
-
-.advantages-list .title {
-  max-width: 175px;
+.advantages-container {
+  background-color: rgb(130, 179, 211);
+  padding: 102px 85px 102px 85px;
+  width: 400px;
 }
-
-
-.advantages-list .text {
-  max-width: 230px;
-}
-
-
-.advantages-container{
-  color: rgb(255, 255, 255);
-  background-color: rgba(130, 179, 211, 1);
-}
-
 
 .advantages-item {
   background-color: rgba(131, 179, 211, 0.12);
+  padding: 112.5px 85px 112.5px 85px;
+  width: 400px;
 }
-
 
 .advantages-item:nth-child(2n) {
   background: rgba(131, 179, 211, 0.2);
 }
 
+.advantages-subtitle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: rgb(0, 0, 0);
+  max-width: 175px;
+  margin: 0 auto 62px auto;
+}
+
+.advantages-subtitle-white {
+  color: rgb(255, 255, 255);
+}
+
+.advantages-subtext {
+  max-width: 230px;
+  margin: 0 auto;
+}
+
+.advantages-subtext-white {
+  color: rgb(255, 255, 255);
+}
 
 .infrastructure {
   padding-top: 64px;
   text-align: center;
 }
 
-.title-infrastructure {
+.infrastructure-item {
+  padding: 81px 85px 81px 85px;
+  width: 400px;
+}
+
+.infrastructure-title {
+  font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   max-width: 505px;
+  color: rgb(0, 0, 0);
+  margin: 0 auto 20px auto;
 }
 
-.text-infrastructure {
+.infrastructure-text {
   font-size: 22px;
   line-height: 26px;
   max-width: 490px;
+  margin: 0 auto 64px auto;
 }
-
 
 .infrastructure-item {
   background: rgba(131, 179, 211, 0.12);
 }
 
-
 .infrastructure-item:nth-child(2n) {
   background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
 }
-
 
 .infrastructure-list {
   margin: 0;
@@ -170,64 +207,90 @@ body {
   list-style: none;
 }
 
-
-.infrastructure-list .title {
+.infrastructure-subtitle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 26px;
+  color: rgb(0, 0, 0);
   max-width: 230px;
+  margin: 0 auto 30px auto;
 }
 
-
-.infrastructure-list .text {
+.infrastructure-subtext {
   max-width: 230px;
+  margin: 0 auto;
 }
-
 
 .search {
-  padding-top: 96px;
+  padding: 96px 304px 96px 304px;
   text-align: center;
 }
 
-.title-search {
+.search-title {
+  font-weight: 700;
   font-size: 30px;
   line-height: 36px;
+  color: rgb(0, 0, 0);
   max-width: 297px;
+  margin: 0 auto 20px auto;
 }
 
-
-.text-search {
+.search-text {
   font-size: 22px;
   line-height: 26px;
   max-width: 592px;
+  margin: 0 auto 54px auto;
 }
 
-
 .news-letter {
-  padding-top: 96px;
+  padding: 96px 258px 104px 258px;
   text-align: center;
-  color: rgb(255, 255, 255);
-  background-color: rgba(131, 179, 211, 0.2);
+  background-color: rgb(130, 179, 211);
   background-image: url("../images/background-subscribe.jpg");
-  height: 414px;
+  min-height: 414px;
   background-repeat: no-repeat;
 }
 
-.title-news-letter {
+.news-letter-title {
+  font-weight: 700;
   font-size: 30px;
   line-height: 36px;
+  color: rgb(0, 0, 0);
   max-width: 404px;
+  margin: 0 auto 20px auto;
 }
 
+.news-letter-title-white {
+  color: rgb(255, 255, 255);
+}
 
-.text-text-news-letter {
+.news-letter-text {
   font-size: 22px;
   line-height: 26px;
   max-width: 475px;
+  margin: 0 auto 54px auto;
+}
+
+.news-letter-text-white {
+  color: rgb(255, 255, 255);
+}
+
+.field {
+  font-family: inherit;
+  line-height: 24px;
+  color: rgb(0, 0, 0);
+  background-color: rgb(242, 242, 242);
+}
+
+.news-letter-inner {
+  background-image: none;
+  background-color: unset;
 }
 
 .page-footer {
-  padding-top: 40px;
+  padding: 40px 70px 30px 70px;
   text-align: center;
 }
-
 
 .social-list {
   margin: 0;
@@ -235,12 +298,9 @@ body {
   list-style: none;
 }
 
-
 .social-link {
-  color: rgb(131, 179, 211);
   text-decoration: none;
 }
-
 
 .phone {
   color: rgb(0, 0, 0);
@@ -252,4 +312,115 @@ body {
 .copyright {
   color: rgb(0, 0, 0);
   text-decoration: none;
+}
+
+.filters {
+  color: rgb(255, 255, 255);
+  background-color: rgb(130, 179, 211);
+  background-image: url("../images/background-filters.jpg");
+  min-height: 412px;
+  background-repeat: no-repeat;
+}
+
+.inner-header-title {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 78px;
+}
+
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumbs-link {
+  color: inherit;
+  font-size: 16px;
+}
+
+.catalog-filters-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 23px;
+}
+
+.catalog-filters-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.control {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.catalog-housing-text {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  color: rgb(0, 0, 0);
+}
+
+.select-control {
+  font-family: inherit;
+  background-color: rgb(255, 255, 255);
+}
+
+.housing-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.housing-card {
+  width: 300px;
+}
+
+.housing-card-link {
+  text-decoration: none;
+}
+
+.housing-card-title {
+  padding-top: 16px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: rgb(0, 0, 0);
+}
+
+.housing-card-rating {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.pagination {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.pagination-link {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(130, 179, 211);
+  text-decoration: none;
+  text-align: center;
+}
+
+.pagination-current {
+  color: rgb(0, 0, 0);
+  background-color: rgb(242, 242, 242);
+}
+
+.pagination-text {
+  font-size: 22px;
+  line-height: 26px;
+  color: rgb(0, 0, 0);
+  text-align: center;
 }
