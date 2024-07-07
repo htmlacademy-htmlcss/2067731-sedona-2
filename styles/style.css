@@ -58,6 +58,33 @@ body {
   background-color: transparent;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  color: rgb(0, 0, 0);
+}
+
+.subtitle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: rgb(0, 0, 0);
+}
+
 .page-container {
   width: 1200px;
   background-color: rgb(255, 255, 255);
@@ -92,15 +119,26 @@ body {
 }
 
 .intro {
+  position: relative;
   text-align: center;
   color: rgb(255, 255, 255);
   background-color: rgb(130, 179, 211);
-  background-image: url("../images/background-index-decor.svg"),
-    url("../images/background-index.jpg");
-  background-size: 100% auto, cover;
-  min-height: 485px;
+  background-image: url("../images/background-index.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: left bottom, left top;
+  background-position: left top;
+  padding: 51px 100px 82px 100px;
+}
+
+.intro::before {
+  content: "";
+  position: absolute;
+  background-image: url("../images/background-index-decor.svg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 57px;
+  bottom: 0;
+  left: 0;
 }
 
 .advantages {
@@ -109,10 +147,9 @@ body {
 }
 
 .advantages-title {
-  font-size: 30px;
-  line-height: 36px;
   max-width: 620px;
   margin: 0 auto 25px auto;
+  text-transform: uppercase;
 }
 
 .advantages-text {
@@ -126,6 +163,8 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .advantages-container {
@@ -140,20 +179,23 @@ body {
   width: 400px;
 }
 
+.advantages-item-img {
+  width: 100%;
+  padding: 0;
+  display: flex;
+}
+
 .advantages-item:nth-child(2n) {
   background: rgba(131, 179, 211, 0.2);
 }
 
 .advantages-subtitle {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-  color: rgb(0, 0, 0);
   max-width: 175px;
   margin: 0 auto 62px auto;
+  text-transform: uppercase;
 }
 
-.advantages-subtitle-white {
+.advantages-subtitle-img {
   color: rgb(255, 255, 255);
 }
 
@@ -162,7 +204,7 @@ body {
   margin: 0 auto;
 }
 
-.advantages-subtext-white {
+.advantages-subtext-img {
   color: rgb(255, 255, 255);
 }
 
@@ -177,12 +219,9 @@ body {
 }
 
 .infrastructure-title {
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
   max-width: 505px;
-  color: rgb(0, 0, 0);
   margin: 0 auto 20px auto;
+  text-transform: uppercase;
 }
 
 .infrastructure-text {
@@ -198,22 +237,20 @@ body {
 
 .infrastructure-item:nth-child(2n) {
   background-color: rgb(255, 255, 255);
-  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
 }
 
 .infrastructure-list {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .infrastructure-subtitle {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 26px;
-  color: rgb(0, 0, 0);
   max-width: 230px;
   margin: 0 auto 30px auto;
+  text-transform: uppercase;
 }
 
 .infrastructure-subtext {
@@ -227,12 +264,9 @@ body {
 }
 
 .search-title {
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
-  color: rgb(0, 0, 0);
   max-width: 297px;
   margin: 0 auto 20px auto;
+  text-transform: uppercase;
 }
 
 .search-text {
@@ -247,20 +281,18 @@ body {
   text-align: center;
   background-color: rgb(130, 179, 211);
   background-image: url("../images/background-subscribe.jpg");
+  background-size: cover;
   min-height: 414px;
   background-repeat: no-repeat;
 }
 
 .news-letter-title {
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
-  color: rgb(0, 0, 0);
   max-width: 404px;
   margin: 0 auto 20px auto;
+  text-transform: uppercase;
 }
 
-.news-letter-title-white {
+.news-letter-title-img {
   color: rgb(255, 255, 255);
 }
 
@@ -271,7 +303,7 @@ body {
   margin: 0 auto 54px auto;
 }
 
-.news-letter-text-white {
+.news-letter-text-img {
   color: rgb(255, 255, 255);
 }
 
@@ -280,6 +312,8 @@ body {
   line-height: 24px;
   color: rgb(0, 0, 0);
   background-color: rgb(242, 242, 242);
+  border: none;
+  border-radius: 4px;
 }
 
 .news-letter-inner {
@@ -289,13 +323,21 @@ body {
 
 .page-footer {
   padding: 40px 70px 30px 70px;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 .social-list {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+}
+
+.social-item {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 47px;
 }
 
 .social-link {
@@ -307,17 +349,24 @@ body {
   font-size: 40px;
   line-height: 40px;
   text-decoration: none;
+  min-width: 331px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .copyright {
   color: rgb(0, 0, 0);
   text-decoration: none;
+  width: 115px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .filters {
   color: rgb(255, 255, 255);
   background-color: rgb(130, 179, 211);
   background-image: url("../images/background-filters.jpg");
+  background-size: cover;
   min-height: 412px;
   background-repeat: no-repeat;
 }
@@ -373,22 +422,25 @@ body {
   padding: 0;
   margin: 0;
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .housing-card {
-  width: 300px;
+  width: 340px;
 }
 
 .housing-card-link {
   text-decoration: none;
 }
 
-.housing-card-title {
+.housing-card-subtitle {
   padding-top: 16px;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-  color: rgb(0, 0, 0);
+  max-width: 300px;
+}
+
+.housing-card-type {
+  max-width: 140px;
 }
 
 .housing-card-rating {
@@ -401,6 +453,11 @@ body {
   padding: 0;
   margin: 0;
   list-style: none;
+  display: flex;
+  width: 1060px;
+  height: 60px;
+  padding-top: 80px;
+  justify-content: flex-start;
 }
 
 .pagination-link {
@@ -411,6 +468,7 @@ body {
   background-color: rgb(130, 179, 211);
   text-decoration: none;
   text-align: center;
+  min-width: 60px;
 }
 
 .pagination-current {
