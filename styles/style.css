@@ -24,8 +24,8 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
-  color: rgb(51, 51, 51);
-  background-color: rgb(242, 242, 242);
+  color: #333333;
+  background-color: #f2f2f2;
   margin: 0;
 }
 
@@ -35,27 +35,34 @@ body {
   font-size: 16px;
   line-height: 20px;
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   border: none;
   border-radius: 4px;
   text-decoration: none;
   text-transform: uppercase;
+  padding: 8px;
 }
 
 .button-brown {
-  background-color: rgb(117, 97, 87);
+  background-color: #756157;
+  display: inline-block;
 }
 
 .button-blue {
-  background-color: rgb(130, 179, 211);
+  background-color: #82b3d3;
 }
 
 .button-green {
-  background-color: rgb(125, 181, 79);
+  background-color: #7db54f;
 }
 
 .button-transparent {
   background-color: transparent;
+}
+
+.button-big{
+  font-size: 20px;
+  line-height: 36px;
 }
 
 .visually-hidden {
@@ -75,25 +82,25 @@ body {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
-  color: rgb(0, 0, 0);
+  color: #000000;
 }
 
 .subtitle {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
-  color: rgb(0, 0, 0);
+  color: #000000;
 }
 
 .page-container {
   width: 1200px;
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
   margin: 0 auto;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
 .page-header {
-  color: rgb(0, 0, 0);
+  color: #000000;
 }
 
 .navigation-list {
@@ -106,8 +113,8 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
-  color: rgb(0, 0, 0);
-  background-color: rgb(255, 255, 255);
+  color: #000000;
+  background-color: #ffffff;
   text-decoration: none;
   text-align: center;
 }
@@ -120,14 +127,17 @@ body {
 
 .intro {
   position: relative;
-  text-align: center;
   color: rgb(255, 255, 255);
-  background-color: rgb(130, 179, 211);
+  background-color: #5998c2;
   background-image: url("../images/background-index.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: left top;
+  background-position: center top;
   padding: 51px 100px 82px 100px;
+}
+.intro-img {
+  display: block;
+  margin: 0 auto;
 }
 
 .intro::before {
@@ -143,20 +153,21 @@ body {
 
 .advantages {
   padding-top: 69px;
-  text-align: center;
 }
 
 .advantages-title {
   max-width: 620px;
   margin: 0 auto 25px auto;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .advantages-text {
   font-size: 22px;
   line-height: 26px;
   max-width: 651px;
-  margin: 0 auto 69px auto;
+  margin: 0 auto 90px auto;
+  text-align: center;
 }
 
 .advantages-list {
@@ -168,14 +179,14 @@ body {
 }
 
 .advantages-container {
-  background-color: rgb(130, 179, 211);
+  background-color: #82b3d3;
   padding: 102px 85px 102px 85px;
   width: 400px;
 }
 
 .advantages-item {
-  background-color: rgba(131, 179, 211, 0.12);
-  padding: 112.5px 85px 112.5px 85px;
+  background-color: rgba(131, 179, 211, 0.2);
+  padding: 112px 85px 112px 85px;
   width: 400px;
 }
 
@@ -186,26 +197,28 @@ body {
 }
 
 .advantages-item:nth-child(2n) {
-  background: rgba(131, 179, 211, 0.2);
+  background: rgba(131, 179, 211, 0.12);
 }
 
 .advantages-subtitle {
   max-width: 175px;
   margin: 0 auto 62px auto;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .advantages-subtitle-img {
-  color: rgb(255, 255, 255);
+  color: #ffffff;
 }
 
 .advantages-subtext {
   max-width: 230px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .advantages-subtext-img {
-  color: rgb(255, 255, 255);
+  color: #ffffff;
 }
 
 .infrastructure {
@@ -236,7 +249,7 @@ body {
 }
 
 .infrastructure-item:nth-child(2n) {
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
 }
 
 .infrastructure-list {
@@ -249,6 +262,7 @@ body {
 
 .infrastructure-subtitle {
   max-width: 230px;
+  padding-top: 102px;
   margin: 0 auto 30px auto;
   text-transform: uppercase;
 }
@@ -279,7 +293,7 @@ body {
 .news-letter {
   padding: 96px 258px 104px 258px;
   text-align: center;
-  background-color: rgb(130, 179, 211);
+  background-color: #82b3d3;
   background-image: url("../images/background-subscribe.jpg");
   background-size: cover;
   min-height: 414px;
@@ -293,7 +307,7 @@ body {
 }
 
 .news-letter-title-img {
-  color: rgb(255, 255, 255);
+  color: #ffffff;
 }
 
 .news-letter-text {
@@ -304,14 +318,14 @@ body {
 }
 
 .news-letter-text-img {
-  color: rgb(255, 255, 255);
+  color: #ffffff;
 }
 
 .field {
   font-family: inherit;
   line-height: 24px;
-  color: rgb(0, 0, 0);
-  background-color: rgb(242, 242, 242);
+  color: #000000;
+  background-color: #f2f2f2;
   border: none;
   border-radius: 4px;
 }
@@ -345,7 +359,7 @@ body {
 }
 
 .phone {
-  color: rgb(0, 0, 0);
+  color: #000000;
   font-size: 40px;
   line-height: 40px;
   text-decoration: none;
@@ -355,7 +369,7 @@ body {
 }
 
 .copyright {
-  color: rgb(0, 0, 0);
+  color: #000000;
   text-decoration: none;
   width: 115px;
   padding-top: 8px;
@@ -363,8 +377,8 @@ body {
 }
 
 .filters {
-  color: rgb(255, 255, 255);
-  background-color: rgb(130, 179, 211);
+  color: #ffffff;
+  background-color: #82b3d3;
   background-image: url("../images/background-filters.jpg");
   background-size: cover;
   min-height: 412px;
@@ -410,12 +424,12 @@ body {
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
-  color: rgb(0, 0, 0);
+  color: #000000;
 }
 
 .select-control {
   font-family: inherit;
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffff;
 }
 
 .housing-list {
@@ -464,21 +478,21 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
-  color: rgb(255, 255, 255);
-  background-color: rgb(130, 179, 211);
+  color: #ffffff;
+  background-color: #82b3d3;
   text-decoration: none;
   text-align: center;
   min-width: 60px;
 }
 
 .pagination-current {
-  color: rgb(0, 0, 0);
-  background-color: rgb(242, 242, 242);
+  color: #000000;
+  background-color: #f2f2f2;
 }
 
 .pagination-text {
   font-size: 22px;
   line-height: 26px;
-  color: rgb(0, 0, 0);
+  color: #000000;
   text-align: center;
 }
