@@ -48,6 +48,7 @@ body {
 .button-header {
   padding-left: 34px;
   padding-right: 34px;
+  margin-left: 20px;
 }
 
 .button-big {
@@ -150,7 +151,7 @@ body {
 
 .navigation-item {
   display: flex;
-  justify-content: center;
+  align-items: center;
 }
 
 .navigation-link {
