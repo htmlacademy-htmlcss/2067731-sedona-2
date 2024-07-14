@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Юлия Левицкая](https://up.htmlacademy.ru/htmlcss-individual/2/user/2067731).
-* Наставник: [Виктория Никитина](https://htmlacademy.ru/profile/id1217273).
+* Наставник: [Павел Позняк](https://htmlacademy.ru/profile/id907403).
 * Сайт: [Мой проект Седона](https://julialevic.github.io/2067731-sedona-2/)
 ---
 
