@@ -18,6 +18,10 @@
   box-sizing: border-box;
 }
 
+html{
+  height: 100%;
+}
+
 body {
   font-family: "PT Sans", sans-serif;
   font-style: normal;
@@ -28,6 +32,13 @@ body {
   background-color: #f2f2f2;
   margin: 0;
 }
+
+.page-container{
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
 
 .button {
   font-family: inherit;
@@ -48,7 +59,9 @@ body {
 .button-header {
   padding-left: 34px;
   padding-right: 34px;
+  margin-top: 14px;
   margin-left: 20px;
+  min-width: 160px;
 }
 
 .button-big {
@@ -126,7 +139,6 @@ body {
 
 .navigation {
   display: flex;
-  flex-wrap: wrap;
   padding: 0 70px;
 }
 
@@ -144,17 +156,16 @@ body {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
   flex-grow: 1;
   margin-left: 30px;
   max-width: 624px;
 }
 
-.navigation-item {
-  display: flex;
-  align-items: center;
-}
 
 .navigation-link {
+  display: flex;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
@@ -172,25 +183,23 @@ body {
   display: flex;
 }
 
-.navigation-user-item {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
 
 .navigation-user-link {
-  padding: 12px 22px;
+  display: flex;
+  align-items: flex-start;
+  padding: 22px;
 }
 
 .intro {
   position: relative;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   background-color: #5998c2;
   background-image: url("../images/background-index.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
   padding: 51px 100px 82px 100px;
+  min-height: 485px;
 }
 .intro-img {
   display: block;
@@ -206,6 +215,10 @@ body {
   height: 57px;
   bottom: 0;
   left: 0;
+}
+
+.main-container{
+  flex-grow: 1;
 }
 
 .advantages {
@@ -239,6 +252,11 @@ body {
   background-color: #82b3d3;
   padding: 102px 85px 102px 85px;
   width: 400px;
+}
+
+.advantages-img {
+  object-fit: cover;
+  height: 100%;
 }
 
 .advantages-item {
@@ -335,7 +353,6 @@ body {
 }
 
 .search-title {
-  max-width: 297px;
   margin: 0 auto 20px auto;
   text-transform: uppercase;
 }
@@ -350,7 +367,7 @@ body {
 .news-letter {
   padding: 96px 258px 104px 258px;
   text-align: center;
-  background-color: #82b3d3;
+  background-color: #2d5d7c;
   background-image: url("../images/background-subscribe.jpg");
   background-size: cover;
   min-height: 414px;
@@ -538,10 +555,8 @@ body {
   margin: 0;
   list-style: none;
   display: flex;
-  width: 1060px;
-  height: 60px;
+  gap: 8px;
   padding-top: 80px;
-  justify-content: flex-start;
 }
 
 .pagination-link {
@@ -552,12 +567,21 @@ body {
   background-color: #82b3d3;
   text-decoration: none;
   text-align: center;
+  border-radius: 4px;
   min-width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .pagination-current {
   color: #000000;
   background-color: #f2f2f2;
+}
+
+.pagination-text{
+  background-color: transparent;
 }
 
 .pagination-text {
