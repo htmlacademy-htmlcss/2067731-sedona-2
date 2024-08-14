@@ -134,11 +134,8 @@ body {
 
 .navigation {
   display: flex;
-  padding: 0 70px;
-}
-
-.navigation-logo {
-  margin-right: 30px;
+  width: 1060px;
+  margin: 0 auto;
 }
 
 .page-header-logo {
@@ -152,17 +149,16 @@ body {
 .navigation-list {
   margin: 0;
   padding: 0;
+  padding-left: 30px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-start;
   flex-grow: 1;
   max-width: 624px;
 }
 
 .navigation-link {
-  display: flex;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
@@ -170,16 +166,19 @@ body {
   background-color: #ffffff;
   text-decoration: none;
   text-align: center;
+  position: relative;
   padding: 20px 16px;
+
 }
 
-.navigation-link-current::before{
+.navigation-link-current::before {
   content: "";
   position: absolute;
-  width: 93px;
+  width: 100%;
   height: 2px;
   background-color: #756257;
-  top: 64px;
+  bottom: -1px;
+  z-index: 1;
 }
 
 .navigation-user {
@@ -187,12 +186,18 @@ body {
   padding: 0;
   list-style: none;
   display: flex;
+  margin-left: auto;
+}
+
+.navigation-user .navigation-user-link {
+  min-height: 20px;
+  min-width: 20px;
 }
 
 .navigation-user-link {
   display: flex;
   align-items: flex-start;
-  padding: 22px;
+  padding: 22px 12px;
 }
 
 .intro {
@@ -233,7 +238,7 @@ body {
 .advantages-title {
   max-width: 620px;
   margin: 0 auto;
-  padding-bottom: 25px;
+  margin-bottom: 25px;
   text-transform: uppercase;
   text-align: center;
 }
@@ -354,8 +359,6 @@ body {
   display: block;
 }
 
-
-
 .infrastructure-item-food::before {
   content: "";
   position: relative;
@@ -380,8 +383,7 @@ body {
 
 .infrastructure-subtitle {
   max-width: 230px;
-  padding-top: 31px;
-  margin: 0 auto 30px auto;
+  margin: 30px auto 30px;
   text-transform: uppercase;
 }
 
@@ -475,12 +477,13 @@ body {
   padding: 0;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
+  max-width: 145px;
 }
 
 .social-item {
-  padding-top: 5px;
-  padding-bottom: 5px;
   width: 47px;
+  height: 40px;
 }
 
 .social-link {
