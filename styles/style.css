@@ -71,8 +71,8 @@ body {
 }
 
 .button-card {
-  padding-left: 26px;
-  padding-right: 26px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .button-brown {
@@ -496,14 +496,18 @@ body {
   text-decoration: none;
 }
 
+.phone-container {
+  margin: 0;
+  padding: 0;
+}
+
 .phone {
   color: #000000;
   font-size: 40px;
   line-height: 40px;
   text-decoration: none;
-  min-width: 331px;
+  max-width: 355px;
   padding-top: 5px;
-  padding-bottom: 5px;
   display: block;
 }
 
@@ -566,6 +570,7 @@ body {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+  padding: 0;
   margin-bottom: 32px;
 }
 
@@ -581,8 +586,8 @@ body {
 }
 
 .catalog-filters-group-infrastructure {
-  width: 150px;
-  margin-right: 70px;
+  width: 155px;
+  margin-right: 65px;
 }
 
 .catalog-filters-group-housing {
@@ -646,9 +651,9 @@ body {
   padding-left: 60px;
 }
 
-span.control-label{
+span.control-label {
   overflow-wrap: break-word;
-  width: 120px;
+  width: 145px;
   padding-left: 36px;
   display: block;
 }
@@ -657,7 +662,11 @@ span.control-label{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto 40px;
+  margin: 0 auto;
+}
+
+.catalog-housing {
+  padding: 50px 70px 60px;
 }
 
 .catalog-housing-text {
@@ -667,7 +676,7 @@ span.control-label{
   line-height: 36px;
   color: #000000;
   margin: 0;
-  padding-top: 7px;
+  padding: 0;
   width: 380px;
 }
 
@@ -705,26 +714,33 @@ span.control-label{
   border: 2px solid #000000;
 }
 
-.catalog-housing {
-  padding: 50px 70px 60px;
+.housing-container {
+  width: 1060px;
+  margin: 40px auto 0;
 }
 
 .housing-list {
   padding: 0;
   margin: 0;
-  margin-top: 40px;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   gap: 20px;
 }
 
 .housing-card {
   width: 340px;
   padding: 20px;
-  box-shadow: 0 0 1px 0 rgba(179, 178, 178, 0.9);
+  box-shadow: 0 0 1px 0 rgba(50, 50, 50, 0.9);
   border-radius: 4px;
+}
+
+.card-content {
+  padding-top: 16px;
+  display: grid;
+  grid-template-columns: 140px 140px;
+  gap: 16px 20px;
+  grid-template-rows: min-content min-content min-content;
 }
 
 .housing-card-link {
@@ -732,18 +748,50 @@ span.control-label{
 }
 
 .housing-card-subtitle {
+  margin: 0;
   padding-top: 16px;
   max-width: 300px;
 }
 
-.housing-card-type {
-  max-width: 140px;
+.housing-card-price {
+  text-align: right;
 }
 
 .housing-card-rating {
   font-size: 16px;
   line-height: 20px;
   text-align: center;
+  background-color: #f2f2f2;
+  border-radius: 4px;
+  padding: 9px 5px;
+  text-transform: uppercase;
+}
+
+.stars {
+  background-image: url("../images/icon/star.svg");
+  background-repeat: space no-repeat;
+  height: 17px;
+  margin: auto 0;
+}
+
+.stars-one {
+  width: 18px;
+}
+
+.stars-two {
+  width: 42px;
+}
+
+.stars-three {
+  width: 66px;
+}
+
+.stars-four {
+  width: 88px;
+}
+
+.stars-fife {
+  width: 90px;
 }
 
 .pagination {
