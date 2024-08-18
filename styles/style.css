@@ -740,7 +740,7 @@ span.control-label {
   display: grid;
   grid-template-columns: 140px 140px;
   gap: 16px 20px;
-  grid-template-rows: min-content min-content min-content;
+  grid-template-rows: 1fr min-content min-content;
 }
 
 .housing-card-link {
@@ -751,6 +751,10 @@ span.control-label {
   margin: 0;
   padding-top: 16px;
   max-width: 300px;
+}
+
+.housing-card-type{
+  overflow-wrap: break-word;
 }
 
 .housing-card-price {
