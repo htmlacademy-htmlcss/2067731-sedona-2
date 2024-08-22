@@ -49,6 +49,7 @@ body {
   text-transform: uppercase;
   padding-top: 8px;
   padding-bottom: 8px;
+  overflow-wrap: break-word;
 }
 
 .button-header {
@@ -73,6 +74,7 @@ body {
 .button-card {
   padding-left: 5px;
   padding-right: 5px;
+  align-self: end;
 }
 
 .button-brown {
@@ -733,6 +735,8 @@ span.control-label {
   padding: 20px;
   box-shadow: 0 0 1px 0 rgba(50, 50, 50, 0.9);
   border-radius: 4px;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-content {
@@ -740,11 +744,19 @@ span.control-label {
   display: grid;
   grid-template-columns: 140px 140px;
   gap: 16px 20px;
-  grid-template-rows: 1fr min-content min-content;
+  grid-template-rows: min-content min-content min-content;
 }
 
 .housing-card-link {
   text-decoration: none;
+  flex-grow: 1;
+}
+
+.housing-card-img {
+  display: block;
+  width: 100%;
+  object-fit: contain;
+  background-color: #f2f2f2;
 }
 
 .housing-card-subtitle {
@@ -753,12 +765,14 @@ span.control-label {
   max-width: 300px;
 }
 
-.housing-card-type{
+.housing-card-type {
   overflow-wrap: break-word;
+  align-self: end;
 }
 
 .housing-card-price {
   text-align: right;
+  align-self: end;
 }
 
 .housing-card-rating {
