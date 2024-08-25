@@ -82,17 +82,71 @@ body {
   display: inline-block;
 }
 
+.button-brown:hover {
+  background-color: #615048;
+}
+
+.button-brown:focus {
+  background-color: #615048;
+}
+
+.button-brown:active {
+  background-color: #756157;
+  color: rgba(255, 255, 255, 0.302);
+}
+
 .button-blue {
   background-color: #82b3d3;
 }
+
+.button-blue:hover {
+  background-color: #68a2ca;
+}
+
+.button-blue:focus {
+  background-color: #68a2ca;
+}
+
+.button-blue:active {
+  background-color: #82b3d3;
+  color: rgba(255, 255, 255, 0.302);
+}
+
 
 .button-green {
   background-color: #7db54f;
 }
 
+.button-green:hover {
+  background-color: #6c9e42;
+}
+
+.button-green:focus {
+  background-color: #6c9e42;
+}
+
+.button-green:active {
+  background-color: #7db54f;
+  color: rgba(255, 255, 255, 0.302);
+}
+
 .button-transparent {
   background-color: transparent;
   margin-top: 32px;
+}
+
+.button-transparent:hover {
+  opacity: 60%;
+}
+
+.button-transparent:focus {
+  border: 3px solid #83b3d3;
+  border-radius: 4px;
+}
+
+.button-transparent:active {
+  border: none;
+  color: rgba(255, 255, 255, 0.302);
 }
 
 .visually-hidden {
@@ -264,6 +318,12 @@ body {
   flex-wrap: wrap;
 }
 
+.advantages-item-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .advantages-container {
   padding: 102px 85px 102px 85px;
   width: 400px;
@@ -271,7 +331,7 @@ body {
 
 .advantages-item {
   background-color: rgba(131, 179, 211, 0.2);
-  padding: 112px 85px 112px 85px;
+  padding: 112px 85px 113px 85px;
   width: 400px;
   flex-grow: 1;
 }
@@ -293,9 +353,31 @@ body {
 
 .advantages-subtitle {
   max-width: 175px;
-  margin: 0 auto 62px auto;
+  margin: 0 auto 31px auto;
+  padding-bottom: 31px;
   text-transform: uppercase;
   text-align: center;
+  position: relative;
+}
+
+li:last-child .advantages-subtitle::after {
+  background-color: rgba(255, 255, 255, 0.302);
+}
+
+li .advantages-subtitle::after {
+  content: "";
+  width: 60px;
+  height: 2px;
+  background-color: rgb(0, 0, 0, 0.302);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -1px;
+}
+
+
+li:first-child .advantages-subtitle::after {
+  background-color: rgba(255, 255, 255, 0.302);
 }
 
 .advantages-subtitle-img {
