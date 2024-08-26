@@ -50,13 +50,13 @@ body {
   padding-top: 8px;
   padding-bottom: 8px;
   overflow-wrap: break-word;
+  cursor: pointer;
 }
 
 .button-header {
   padding-left: 34px;
   padding-right: 34px;
-  margin-top: 14px;
-  margin-left: 20px;
+  margin: 14px 0 14px 20px;
   min-width: 160px;
 }
 
@@ -111,7 +111,6 @@ body {
   background-color: #82b3d3;
   color: rgba(255, 255, 255, 0.302);
 }
-
 
 .button-green {
   background-color: #7db54f;
@@ -246,15 +245,47 @@ body {
   margin-left: auto;
 }
 
+.navigation-user-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: flex-start;
+}
+
 .navigation-user .navigation-user-link {
-  min-height: 20px;
-  min-width: 20px;
+  min-height: 64px;
+  min-width: 44px;
 }
 
 .navigation-user-link {
-  display: flex;
-  align-items: flex-start;
+  display: block;
   padding: 22px 12px;
+  position: relative;
+}
+
+.navigation-user-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.likes-number {
+  display: block;
+  min-width: 20px;
+  height: 20px;
+  font-size: 10px;
+  line-height: 10px;
+  background-color: #7db54f;
+  color: #ffffff;
+  border-radius: 100vw;
+  padding: 5px 5px 5px 4px;
+  text-decoration: none;
+  background-position: 50%;
+  position: absolute;
+  top: 11px;
+  left: 19px;
 }
 
 .intro {
@@ -374,7 +405,6 @@ li .advantages-subtitle::after {
   transform: translateX(-50%);
   bottom: -1px;
 }
-
 
 li:first-child .advantages-subtitle::after {
   background-color: rgba(255, 255, 255, 0.302);
@@ -549,6 +579,7 @@ li:first-child .advantages-subtitle::after {
 
 .news-letter button {
   border-radius: 0 4px 4px 0;
+  width: 232px;
 }
 
 .news-letter-inner {
@@ -623,18 +654,48 @@ li:first-child .advantages-subtitle::after {
 }
 
 .breadcrumbs {
-  margin: 0 auto;
+  margin: 8px auto 0;
   padding: 0;
   list-style-type: none;
   display: flex;
-  padding-top: 8px;
-  gap: 28px;
+  gap: 24px;
   width: 1060px;
+}
+
+.breadcrumbs-item{
+  display: flex;
+  align-items: center;
 }
 
 .breadcrumbs-link {
   color: inherit;
   font-size: 16px;
+}
+
+.breadcrumbs-link-home {
+  background-image: url("../images/icon/breadcrums-house.svg");
+  width: 13px;
+  height: 15px;
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-left: -3px;
+  padding-left: 21px;
+}
+
+.breadcrumbs-link-current{
+  position: relative;
+}
+
+.breadcrumbs-link-current::before{
+  background-image: url("../images/icon/breadcrums-arrow.svg");
+  width: 7px;
+  height: 10px;
+  display: block;
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -17px;
 }
 
 .catalog-filters {
@@ -672,6 +733,35 @@ li:first-child .advantages-subtitle::after {
 .catalog-filters-group-infrastructure {
   width: 155px;
   margin-right: 65px;
+}
+
+.control {
+  position: relative;
+  cursor: pointer;
+}
+
+.control-mark {
+  position: absolute;
+  left: 0;
+  width: 20px;
+  min-height: 20px;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  content: "";
+  position: absolute;
+  background-color: #3f5e72;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 5px;
+  left: 5px;
 }
 
 .catalog-filters-group-housing {
@@ -714,6 +804,10 @@ li:first-child .advantages-subtitle::after {
   margin-right: 2px;
 }
 
+.filter-range-control-limit-min:focus {
+  outline: 3px solid #83b3d3;
+}
+
 .filter-range-control-text {
   line-height: 24px;
   text-transform: lowercase;
@@ -728,6 +822,10 @@ li:first-child .advantages-subtitle::after {
   border-radius: 0 4px 4px 0;
 }
 
+.filter-range-control-limit-max:focus {
+  outline: 3px solid #83b3d3;
+}
+
 .filters-controls {
   display: flex;
   flex-direction: column;
@@ -740,6 +838,41 @@ span.control-label {
   width: 145px;
   padding-left: 36px;
   display: block;
+}
+
+.filter-range-handle-container {
+  position: relative;
+  margin-top: 6px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 287px;
+}
+
+.filter-range-line {
+  position: absolute;
+  width: 226px;
+  height: 4px;
+  background-color: #ffffff;
+}
+
+.filter-range-handle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filter-range-handle-min {
+  top: -8px;
+  left: 0;
+}
+
+.filter-range-handle-max {
+  top: -8px;
+  right: 0;
 }
 
 .result-container {
@@ -781,6 +914,14 @@ span.control-label {
   background-image: url("../images/icon/arrow.svg");
   background-position: 258px center;
   background-repeat: no-repeat;
+}
+
+.select-control:hover {
+  border: 2px solid #68a2ca;
+}
+
+.select-control:focus {
+  border: 2px solid #68a2ca;
 }
 
 .view-button-container {
