@@ -679,6 +679,11 @@ li:first-child .advantages-subtitle::after {
   padding-inline: 20px;
 }
 
+.field:focus {
+  outline: none;
+  border: 2px solid #83b3d3;
+}
+
 .news-letter button {
   border-radius: 0 4px 4px 0;
   width: 232px;
@@ -1172,6 +1177,7 @@ span.control-label {
   background-image: url("../images/icon/arrow.svg");
   background-position: 258px center;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .select-control:hover {
@@ -1570,6 +1576,7 @@ span.control-label {
   font-weight: 700;
   color: #000000;
   margin-bottom: 4px;
+  column-gap: 5px;
 }
 
 .form-field {
@@ -1582,10 +1589,28 @@ span.control-label {
   border-radius: 4px;
   padding: 12px 45px 12px 20px;
   background-color: #f2f2f2;
+  background-image: url("../images/icon/calendar.svg");
+  background-position: 402px center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.form-field:hover {
+  background-color: #e6e6e6;
+}
+
+.form-field:focus {
+  background-color: #e6e6e6;
+  outline: none;
+}
+
+.form-field:active {
+  outline: 3px solid #83b3d3;
+  background-color: #f2f2f2;
 }
 
 .error-massage {
-  margin-left: 155px;
+  margin-left: 157px;
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -1598,7 +1623,7 @@ span.control-label {
   font-size: 16px;
   font-weight: 400;
   line-height: 21px;
-  margin-left: 155px;
+  margin-left: 157px;
 }
 
 .modal-group-ages {
@@ -1607,7 +1632,7 @@ span.control-label {
   margin-bottom: 48px;
 }
 
-.modal-group-oldest {
+.modal-group-adult {
   height: 48px;
   display: flex;
   align-items: center;
@@ -1633,21 +1658,44 @@ span.control-label {
   border: none;
   cursor: pointer;
   display: block;
+  position: relative;
+}
+
+.add-button::before {
+  content: "";
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 20px;
 }
 
 .minus-button {
   border-radius: 4px 0 0 4px;
-  position: relative;
 }
 
-.minus-button::after {
-  position: absolute;
-  content: "";
-  width: 14px;
-  height: 2px;
-  background-color: rgba(117, 97, 87, 0.3);
-  left: 14px;
-  top: 22px;
+.minus-button::before {
+  background-image: url("../images/icon/minus.svg");
+  opacity: 30%;
+}
+
+.add-button:focus {
+  outline: none;
+}
+
+.add-button:hover::before {
+  opacity: 1;
+}
+
+.add-button:focus::before {
+  outline: 3px solid #82b3d3;
+  border-radius: 4px;
+  opacity: 1;
+}
+
+.add-button:active::before {
+  opacity: 30%;
+  outline: none;
 }
 
 .number-field {
@@ -1672,55 +1720,12 @@ span.control-label {
 }
 
 .plus-button {
-  position: relative;
   border-radius: 0 4px 4px 0;
 }
 
 .plus-button::before {
-  position: absolute;
-  content: "";
-  width: 14px;
-  height: 2px;
-  background-color: rgba(117, 97, 87, 0.3);
-  left: 14px;
-  top: 22px;
-}
-
-.plus-button::after {
-  position: absolute;
-  content: "";
-  width: 14px;
-  height: 2px;
-  background-color: rgba(117, 97, 87, 0.3);
-  left: 14px;
-  top: 22px;
-  transform: rotate(90deg);
-}
-
-.add-button:hover::before {
-  background-color: #000000;
-}
-
-.add-button:hover::after {
-  background-color: #000000;
-}
-
-.plus-button:focus::before {
-  outline: 3px solid #82b3d3;
-  background-color: #000000;
-}
-
-.add-button:focus::after {
-  outline: 3px solid #82b3d3;
-  background-color: #000000;
-}
-
-.add-button:active::before {
-  background-color: rgba(117, 97, 87, 0.3);
-}
-
-.add-button:active::after {
-  background-color: rgba(117, 97, 87, 0.3);
+  background-image: url("../images/icon/plus.svg");
+  opacity: 30%;
 }
 
 .modal-group-children {
@@ -1757,30 +1762,32 @@ span.control-label {
 
 .tooltip-massage {
   font-family: "PT Sans", sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
-  color: #ffffff;
   background-color: #333333;
-  position: absolute;
-  width: 256px;
-  min-height: 103px;
-  padding: 20px 20px 23px;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: none;
+  padding: 20px 22px;
   border-radius: 10px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-  top: calc(100% + 15px);
-  left: calc(50% - 128px);
+  width: 256px;
+  min-height: 142px;
+  position: absolute;
+  margin-top: 16px;
+  margin-right: 42px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
   display: none;
 }
 
 .tooltip-massage::before {
   content: "";
-  background-image: url("../images/icon/tooltip_arrow.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   position: absolute;
-  width: 19px;
-  height: 9px;
+  display: block;
+  border-bottom: 10px solid #333333;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
   bottom: 100%;
   left: 50%;
   transform: translateX(-50%);
@@ -1791,7 +1798,7 @@ span.control-label {
   display: block;
 }
 
-.modal-searh-button {
+.modal-search-button {
   font-family: inherit;
   font-weight: 700;
   font-size: 20px;
@@ -1810,6 +1817,20 @@ span.control-label {
   transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
 }
 
-.modal-container-clouse{
+modal-search-button:hover {
+  background-color: #68a2ca;
+}
+
+.modal-search-button:focus {
+  outline: none;
+  background-color: #68a2ca;
+}
+
+.modal-search-button:active {
+  background-color: #68a2ca;
+  color: rgb(255, 255, 255, 0.3);
+}
+
+.modal-container-clouse {
   display: none;
 }
