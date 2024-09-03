@@ -1051,7 +1051,7 @@ li:first-child .advantages-subtitle::after {
 .filter-range-control-limit {
   max-width: 143px;
   height: 48px;
-  padding: 12px 20px;
+  padding: 12px 50px 12px 20px;
   font-family: inherit;
   font-size: 18px;
   line-height: 24px;
