@@ -27,12 +27,17 @@ body {
   color: #333333;
   background-color: #f2f2f2;
   margin: 0;
+  min-width: 1200px;
 }
 
 .page-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  width: 1200px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
 .button {
@@ -101,7 +106,7 @@ body {
 
 .button-brown:not(:disabled):active {
   background-color: #756157;
-  color: rgba(255, 255, 255, 0.302);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .button-blue {
@@ -126,7 +131,7 @@ body {
 
 .button-blue:not(:disabled):active {
   background-color: #82b3d3;
-  color: rgba(255, 255, 255, 0.302);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .button-green {
@@ -151,7 +156,7 @@ body {
 
 .button-green:not(:disabled):active {
   background-color: #7db54f;
-  color: rgba(255, 255, 255, 0.302);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .button-transparent {
@@ -160,7 +165,7 @@ body {
 }
 
 .button-transparent:not(:disabled):hover {
-  opacity: 60%;
+  opacity: 0.6;
 }
 
 .button-transparent:not(:disabled):focus {
@@ -177,11 +182,11 @@ body {
 
 .button-transparent:not(:disabled):active {
   border: none;
-  color: rgba(255, 255, 255, 0.302);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .filters-controls .button-transparent:disabled {
-  opacity: 10%;
+  opacity: 0.1;
   background-color: transparent;
 }
 
@@ -202,7 +207,8 @@ body {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -221,13 +227,6 @@ body {
   line-height: 28px;
   color: #000000;
   overflow-wrap: break-word;
-}
-
-.page-container {
-  width: 1200px;
-  background-color: #ffffff;
-  margin: 0 auto;
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
 .page-header {
@@ -252,15 +251,15 @@ body {
 }
 
 .navigation-logo:hover .page-header-logo {
-  opacity: 60%;
+  opacity: 0.6;
 }
 
 .navigation-logo:focus .page-header-logo {
-  opacity: 60%;
+  opacity: 0.6;
 }
 
 .navigation-logo:active .page-header-logo {
-  opacity: 30%;
+  opacity: 0.3;
 }
 
 .page-header-logo {
@@ -380,7 +379,7 @@ body {
 .navigation-user-link:active .navigation-user-icon {
   border: none;
   fill: #83b3d3;
-  fill-opacity: 30%;
+  fill-opacity: 0.3;
 }
 
 .likes-number {
@@ -411,6 +410,7 @@ body {
   padding: 51px 100px 82px 100px;
   min-height: 485px;
 }
+
 .intro-img {
   display: block;
   margin: 0 auto;
@@ -461,6 +461,11 @@ body {
   flex-wrap: wrap;
 }
 
+.advantages-img{
+  max-width: 100%;
+  object-fit: contain;
+}
+
 .advantages-item-list {
   display: flex;
   flex-direction: column;
@@ -504,14 +509,14 @@ body {
 }
 
 li:last-child .advantages-subtitle::after {
-  background-color: rgba(255, 255, 255, 0.302);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 li .advantages-subtitle::after {
   content: "";
   width: 60px;
   height: 2px;
-  background-color: rgb(0, 0, 0, 0.302);
+  background-color: rgb(0, 0, 0, 0.3);
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -519,7 +524,7 @@ li .advantages-subtitle::after {
 }
 
 li:first-child .advantages-subtitle::after {
-  background-color: rgba(255, 255, 255, 0.302);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .advantages-subtitle-img {
@@ -751,7 +756,7 @@ li:first-child .advantages-subtitle::after {
 
 .social-link:active .social-link-icon {
   fill: #68a2ca;
-  opacity: 30%;
+  opacity: 0.3;
 }
 
 .phone-container {
@@ -787,7 +792,7 @@ li:first-child .advantages-subtitle::after {
 
 .phone:active {
   color: #756157;
-  opacity: 30%;
+  opacity: 0.3;
 }
 
 .htmlacademy-logo-link {
@@ -826,7 +831,7 @@ li:first-child .advantages-subtitle::after {
 
 .htmlacademy-logo-link:active .htmlacademy-logo-icon {
   fill: #756157;
-  opacity: 30%;
+  opacity: 0.3;
 }
 
 .filters {
@@ -891,11 +896,11 @@ li:first-child .advantages-subtitle::after {
 }
 
 .breadcrumbs-link-home:hover {
-  opacity: 60%;
+  opacity: 0.6;
 }
 
 .breadcrumbs-link-home:focus {
-  opacity: 60%;
+  opacity: 0.6;
   outline: none;
 }
 
@@ -905,11 +910,11 @@ li:first-child .advantages-subtitle::after {
 
 .breadcrumbs-link-home:focus-visible {
   outline: none;
-  opacity: 60%;
+  opacity: 0.6;
 }
 
 .breadcrumbs-link-home:active {
-  opacity: 30%;
+  opacity: 0.3;
 }
 
 .catalog-filters {
@@ -952,6 +957,8 @@ li:first-child .advantages-subtitle::after {
 .control {
   position: relative;
   cursor: pointer;
+  width: 150px;
+  display: block;
 }
 
 .control-mark {
@@ -967,8 +974,8 @@ li:first-child .advantages-subtitle::after {
 .control-input[type="checkbox"]:checked + .control-mark::before {
   content: "";
   position: absolute;
-  left: 6px;
-  top: 3px;
+  left: 5px;
+  top: 2px;
   width: 6px;
   height: 11px;
   border: solid #3f5e72;
@@ -992,11 +999,11 @@ li:first-child .advantages-subtitle::after {
 }
 
 .control-input:hover + .control-mark {
-  opacity: 60%;
+  opacity: 0.6;
 }
 
 .control-input:hover ~ .control-label {
-  opacity: 60%;
+  opacity: 0.6;
 }
 
 .control-input:focus + .control-mark {
@@ -1004,19 +1011,19 @@ li:first-child .advantages-subtitle::after {
 }
 
 .control-input:active + .control-mark {
-  opacity: 30%;
+  opacity: 0.3;
 }
 
 .control-input:active ~ .control-label {
-  opacity: 30%;
+  opacity: 0.3;
 }
 
 .control-input:disabled + .control-mark {
-  opacity: 10%;
+  opacity: 0.1;
 }
 
 .control-input:disabled ~ .control-label {
-  opacity: 10%;
+  opacity: 0.1;
 }
 
 .catalog-filters-group-housing {
@@ -1092,9 +1099,7 @@ li:first-child .advantages-subtitle::after {
 
 span.control-label {
   overflow-wrap: break-word;
-  width: 145px;
   padding-left: 36px;
-  display: block;
 }
 
 .filter-range-handle-container {
@@ -1173,7 +1178,8 @@ span.control-label {
   height: 49px;
   width: 292px;
   margin-left: 158px;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   background-image: url("../images/icon/arrow.svg");
   background-position: 258px center;
   background-repeat: no-repeat;
@@ -1393,6 +1399,7 @@ span.control-label {
   margin: 0;
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   padding-top: 80px;
 }
@@ -1422,9 +1429,6 @@ span.control-label {
 
 .pagination-text {
   background-color: transparent;
-}
-
-.pagination-text {
   font-size: 22px;
   line-height: 26px;
   color: #000000;
@@ -1452,7 +1456,7 @@ span.control-label {
 
 .pagination-link:active {
   background-color: #82b3d3;
-  color: rgb(255, 255, 255, 0.302);
+  color: rgb(255, 255, 255, 0.3);
 }
 
 .modal-container {
@@ -1545,11 +1549,11 @@ span.control-label {
 }
 
 .modal-close-button:active::before {
-  opacity: 30%;
+  opacity: 0.3;
 }
 
 .modal-close-button:active::after {
-  opacity: 30%;
+  opacity: 0.3;
 }
 
 .modal-form {
@@ -1607,6 +1611,10 @@ span.control-label {
 .form-field:active {
   outline: 3px solid #83b3d3;
   background-color: #f2f2f2;
+}
+
+.form-field::placeholder {
+  opacity: 0.6;
 }
 
 .error-massage {
@@ -1676,7 +1684,7 @@ span.control-label {
 
 .minus-button::before {
   background-image: url("../images/icon/minus.svg");
-  opacity: 30%;
+  opacity: 0.3;
 }
 
 .add-button:focus {
@@ -1694,7 +1702,7 @@ span.control-label {
 }
 
 .add-button:active::before {
-  opacity: 30%;
+  opacity: 0.3;
   outline: none;
 }
 
@@ -1709,12 +1717,14 @@ span.control-label {
   background-color: #f2f2f2;
   border: none;
   padding: 12px 5px;
-  appearance: textfield;
+  -webkit-appearance: textfield;
+          appearance: textfield;
   text-align: center;
 }
 
 .number-field::-webkit-inner-spin-button {
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   margin: 0;
   visibility: hidden;
 }
@@ -1725,7 +1735,7 @@ span.control-label {
 
 .plus-button::before {
   background-image: url("../images/icon/plus.svg");
-  opacity: 30%;
+  opacity: 0.3;
 }
 
 .modal-group-children {
@@ -1749,7 +1759,7 @@ span.control-label {
 }
 
 .tooltip-button {
-  background-image: url(../images/icon/attention.svg);
+  background-image: url("../images/icon/attention.svg");
   width: 26px;
   height: 26px;
   display: block;
@@ -1817,7 +1827,7 @@ span.control-label {
   transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
 }
 
-modal-search-button:hover {
+.modal-search-button:hover {
   background-color: #68a2ca;
 }
 
