@@ -12,7 +12,7 @@
 
 <body>
   <div class="page-container">
-    <header class="page-header">
+    <header class="page-header" data-test="header">
       <nav class="navigation">
         <a class="navigation-logo" href="index.html" aria-current="page">
           <img class="page-header-logo" src="images/logo.svg" width="140" height="70" alt="Логотип города Седона.">
@@ -56,12 +56,12 @@
         </ul>
       </nav>
     </header>
-    <main class="main-container main-index">
-      <section class="intro">
+    <main class="main-container main-index" data-test="main">
+      <section class="intro" data-test="hero">
         <h1 class="visually-hidden">Добро пожаловать в грандиозный город Седона</h1>
         <img class="intro-img" src="images/welcome-to-sedona.svg" width="458" height="352" alt="Природа города Седона.">
       </section>
-      <section class="advantages">
+      <section class="advantages" data-test="advantages">
         <div class="advantages-header">
           <h2 class="title advantages-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
           <p class="advantages-text">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
@@ -99,7 +99,7 @@
           </li>
         </ul>
       </section>
-      <section class="infrastructure">
+      <section class="infrastructure" data-test="service">
         <h2 class="title infrastructure-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
         <p class="infrastructure-text">Опытный персонал и качественное обслуживание!</p>
         <ul class="infrastructure-list">
@@ -118,13 +118,13 @@
           </li>
         </ul>
       </section>
-      <section class="search">
+      <section class="search" data-test="search">
         <h2 class="title search-title">Заинтересовались?</h2>
         <p class="search-text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в
           Седоне</p>
         <a class="button button-brown button-big  open-modal" href="">Поиск гостиницы в Седоне</a>
       </section>
-      <section class="news-letter">
+      <section class="news-letter" data-test="subscribe">
         <h2 class="title news-letter-title news-letter-title-img">Подпишитесь на рассылку</h2>
         <p class="news-letter-text news-letter-text-img">Только полезная информация и никакого спама, честное
           бойскаутское!</p>
@@ -135,7 +135,7 @@
         </form>
       </section>
     </main>
-    <footer class="page-footer">
+    <footer class="page-footer" data-test="footer">
       <ul class="social-list">
         <li class="social-item">
           <a class="social-link" href="https://vk.com/htmlacademy">
@@ -180,7 +180,7 @@
       </a>
     </footer>
 
-    <div class="modal-container modal-container-clouse">
+    <div class="modal-container modal-container-clouse" data-test="modal">
       <div class="modal modal-auth">
         <section class="modal-content">
           <ul class="modal-search-container">
