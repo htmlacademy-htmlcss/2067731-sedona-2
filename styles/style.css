@@ -208,7 +208,7 @@ body {
   padding: 0;
   white-space: nowrap;
   -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -436,7 +436,7 @@ body {
 }
 
 .advantages-title {
-  max-width: 620px;
+  width: 630px;
   margin: 0 auto;
   margin-bottom: 25px;
   text-transform: uppercase;
@@ -446,7 +446,7 @@ body {
 .advantages-text {
   font-size: 22px;
   line-height: 26px;
-  max-width: 651px;
+  width: 655px;
   margin: 0 auto;
   padding-bottom: 25px;
   text-align: center;
@@ -461,7 +461,7 @@ body {
   flex-wrap: wrap;
 }
 
-.advantages-img{
+.advantages-img {
   max-width: 100%;
   object-fit: contain;
 }
@@ -479,7 +479,7 @@ body {
 
 .advantages-item {
   background-color: rgba(131, 179, 211, 0.2);
-  padding: 112px 85px 113px 85px;
+  padding: 112px 83px 113px 83px;
   width: 400px;
   flex-grow: 1;
 }
@@ -532,7 +532,7 @@ li:first-child .advantages-subtitle::after {
 }
 
 .advantages-subtext {
-  max-width: 230px;
+  width: 232px;
   margin: 0 auto;
   text-align: center;
   overflow-wrap: break-word;
@@ -646,7 +646,7 @@ li:first-child .advantages-subtitle::after {
 }
 
 .news-letter-title {
-  max-width: 404px;
+  width: 430px;
   margin: 0 auto 20px auto;
   text-transform: uppercase;
 }
@@ -668,6 +668,10 @@ li:first-child .advantages-subtitle::after {
 }
 
 .news-letter-form {
+  display: flex;
+}
+
+.news-letter-label {
   display: flex;
 }
 
@@ -1179,7 +1183,7 @@ span.control-label {
   width: 292px;
   margin-left: 158px;
   -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
   background-image: url("../images/icon/arrow.svg");
   background-position: 258px center;
   background-repeat: no-repeat;
@@ -1718,13 +1722,13 @@ span.control-label {
   border: none;
   padding: 12px 5px;
   -webkit-appearance: textfield;
-          appearance: textfield;
+  appearance: textfield;
   text-align: center;
 }
 
 .number-field::-webkit-inner-spin-button {
   -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
   margin: 0;
   visibility: hidden;
 }
