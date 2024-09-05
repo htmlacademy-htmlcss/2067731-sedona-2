@@ -980,8 +980,8 @@ li:first-child .advantages-subtitle::after {
 .control-input[type="checkbox"]:checked + .control-mark::before {
   content: "";
   position: absolute;
-  left: 5px;
-  top: 2px;
+  left: 7px;
+  top: 4px;
   width: 6px;
   height: 11px;
   border: solid #3f5e72;
